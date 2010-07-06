@@ -24,12 +24,12 @@ tunnel_vars = {
   # the path to the public key on the instance the tunnel is from
   :ssh_public_key => '',
   # the port that will be being forwarded
-  :connect_port => ,
+  :connect_port => 80,
   # the host on the remote side (or local side for a reverse tunnel) 
   # that the :connect_port will be forwarded to
   :forward_host => '',
   # the port on :forward_host that :connect_port will be forwarded to
-  :forward_port => ,
+  :forward_port => 80,
   # valid values: FWD, REV, DUAL. Determines what kind of tunnel(s) to create
   # DUAL means create both a forward and reverse tunnel
   :tunnel_direction => '', 

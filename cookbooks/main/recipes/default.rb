@@ -29,7 +29,7 @@
 #require_recipe "ssmtp"
 
 #uncomment to run the mongodb recipe
-# require_recipe "mongodb"
+require_recipe "mongodb"
 
 #uncomment to run the sunspot recipe
 # require_recipe "sunspot"
@@ -44,7 +44,7 @@
 #require_recipe "resque"
 
 #uncomment to run the redis recipe
-#require_recipe "redis"
+require_recipe "redis"
 
 #require_recipe "logrotate"
 #
