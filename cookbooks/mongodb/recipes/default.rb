@@ -10,7 +10,6 @@ cron_hour =  if node[:backup_interval].to_s == '24'
 
 # Cookbook Name:: mongodb
 # Recipe:: default
-if node[:instance_role] == 'db_master' 
   size = `curl -s http://instance-data.ec2.internal/latest/meta-data/instance-type`
   package_tgz = case size
   when /m1.small|c1.medium/ # 32 bit
@@ -90,7 +89,6 @@ if node[:instance_role] == 'db_master'
     command  "/usr/local/bin/mongodb_backup /data/mongodbbackups"
     not_if { node[:backup_window].to_s == '0' }
   end
-end
 
 if node[:instance_role] == 'app_master'
   node[:applications].each do |app_name,data|
